@@ -6,6 +6,7 @@ export default function Navbar() {
       <Link href="/" className="font-bold">MyApp</Link>
       <div className="flex gap-4">
         <Link href="/" className="text-sm hover:underline">Home</Link>
+        <Link href="/posts" className="text-sm hover:underline">Posts</Link>
       </div>
     </nav>
   );
