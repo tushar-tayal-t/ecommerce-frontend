@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Geist } from "next/font/google";
 import QueryProvider from "@/components/providers/QueryProvider";
-import { Toaster } from "@/components/ui/sonner";
-import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+import Navbar from "@/components/shared/Navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,15 +10,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body>
         <QueryProvider>
+          <Navbar />
           {children}
-          <Toaster />
         </QueryProvider>
       </body>
     </html>
